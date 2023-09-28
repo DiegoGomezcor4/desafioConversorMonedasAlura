@@ -20,8 +20,35 @@ public class principal {
                         double Minput = Double.parseDouble((input));
                         monedas.ConvertirMonedas(Minput);
                     }
+                case "Conversor de Temperatura":
+                    input = JOptionPane.showInputDialog("Ingresa el valor de la temperatura que deseas convertir ");
+                    if(Validar(input) == true) {
+                        double Minput = Double.parseDouble(input);
+                        temperatura.ConvertirTemperatura(Minput);
+
+                        int respuesta = 0;
+                        respuesta = JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
+                        if((respuesta == 0) && (Validar(input) == true)) {
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Programa terminado");
+                        }
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Valor inválido");
+                    }
+                    break;
             }
 
+        }
+    }
+
+    public static boolean Validar(String input) {
+        try {
+            double x = Double.parseDouble(input);
+            if(x >= 0 || x < 0);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 }
