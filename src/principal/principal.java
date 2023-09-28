@@ -13,6 +13,14 @@ public class principal {
 
         while(true){
             String opciones = (JOptionPane.showInputDialog(null, "Seleccione una opcion", "Menu",JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Conversor de Moneda","Conversor de Temperatura"},"Seleccion")).toString();
+            switch (opciones){
+                case "Conversor de Moneda":
+                    String input = JOptionPane.showInputDialog("Ingresa la cantidad a convertir: ");
+                    if (Validar(input) == true){
+                        double Minput = Double.parseDouble((input));
+                        monedas.ConvertirMonedas(Minput);
+                    }
+            }
 
         }
     }
