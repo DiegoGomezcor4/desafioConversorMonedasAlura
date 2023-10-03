@@ -4,15 +4,15 @@ import javax.swing.JOptionPane;
 
 public class ConvertirMonedasAPesos {
     public void ConvertirDolaresAPesos(double valor) {
-        double monedaDolar = valor * 3739.00;
+        double monedaDolar = valor * 800;
         monedaDolar = (double) Math.round(monedaDolar *100d)/100;
-        JOptionPane.showMessageDialog(null, "Tienes $ " +monedaDolar+ " Pesos Colombianos");
+        JOptionPane.showMessageDialog(null, "Tienes $ " +monedaDolar+ " Pesos Argentinos");
     }
 
     public void ConvertirEurosAPesos(double valor) {
-        double monedaEuro = valor * 4050.48;
+        double monedaEuro = valor * 900;
         monedaEuro = (double) Math.round(monedaEuro *100d)/100;
-        JOptionPane.showMessageDialog(null, "Tienes $ " +monedaEuro+ " Pesos Colombianos");
+        JOptionPane.showMessageDialog(null, "Tienes $ " +monedaEuro+ " Pesos Argentinos");
     }
 
     public void ConvertirLibrasAPesos(double valor) {
